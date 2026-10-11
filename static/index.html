@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f2e4"><meta name="description" content="Ask questions about The Wonderful Wizard of Oz and explore the passages behind each answer.">
+  <title>Oz Book Companion — What shall we discover?</title>
+  <link rel="stylesheet" href="/static/style.css"><script src="/static/chat.js" defer></script>
+</head>
+<body class="chat-page">
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Oz book companion home"><span class="brand-mark">OZ</span><span class="brand-name">BOOK<br>COMPANION</span></a>
+    <nav class="site-nav" aria-label="Main navigation"><a class="active" href="/">Ask the book</a><a href="/how-rag">How RAG works</a></nav>
+    <div class="top-actions"><span id="status" class="status" role="status"><span class="status-dot"></span><span id="status-text">Preparing your book…</span></span><button id="clear" class="clear-button" type="button">↺ <span>New chat</span></button></div>
+  </header>
+  <main class="page-shell">
+    <section id="intro" class="welcome">
+      <div class="welcome-copy"><p class="eyebrow"><span>✦</span> A BOOKISH LITTLE ADVENTURE</p><h1>What shall we<br><em>discover in Oz?</em></h1><p class="lede">Ask about the people, places, and curious turns in <i>The Wonderful Wizard of Oz</i>. Every answer leads back to the book.</p></div>
+      <figure class="welcome-art"><img src="/static/images/oz-yellow-road.png" alt="Dorothy and her friends follow the yellow brick road toward the Emerald City"><figcaption><span>YOUR NEXT CHAPTER</span><span>✦</span></figcaption></figure>
+      <div class="suggestions-wrap"><div class="suggestion-heading"><div><p class="eyebrow">PICK A PATH</p><h2>Try asking…</h2></div><span class="heading-sparkle">✷</span></div>
+        <div class="suggestions">
+          <button data-question="What does the Scarecrow ask Oz to give him?" type="button"><span class="prompt-icon scarecrow">♧</span><span>Why does the Scarecrow want a brain?</span><span class="suggestion-arrow">↗</span></button>
+          <button data-question="What challenges do Dorothy and her friends face on the way to the Emerald City?" type="button"><span class="prompt-icon poppy">✿</span><span>What do they meet along the road?</span><span class="suggestion-arrow">↗</span></button>
+          <button data-question="How does Dorothy get to Oz?" type="button"><span class="prompt-icon bricks">▦</span><span>How does Dorothy get to Oz?</span><span class="suggestion-arrow">↗</span></button>
+          <button data-question="What does the Lion want from the Wizard?" type="button"><span class="prompt-icon lion">♌</span><span>What does the Lion hope to find?</span><span class="suggestion-arrow">↗</span></button>
+        </div>
+      </div>
+    </section>
+    <section id="messages" class="conversation" aria-label="Conversation" aria-live="polite"></section>
+    <div class="composer-wrap"><form id="chat-form" class="composer"><label class="sr-only" for="question">Your question about the book</label><textarea id="question" maxlength="1000" rows="1" placeholder="Ask a question about the book…" required></textarea><button id="send" type="submit" disabled><span class="send-label">Ask the book</span><span class="send-icon" aria-hidden="true">➤</span></button></form><p class="footnote">Answers come from the book. Open a passage to follow the trail.</p></div>
+  </main>
+</body>
+</html>
