@@ -84,6 +84,18 @@ It sends that JSON to the local address `POST /api/chat`. FastAPI passes the que
 
 The browser does not load the AI models. Python does.
 
+## What are MiniLM and FLAN-T5?
+
+A **model** is a trained AI program that learned patterns from examples. GPT-4o mini is another model name; it is a different model made by OpenAI. Models can have different sizes and jobs.
+
+In this app, the names refer to particular trained models that Python loads and uses:
+
+- **MiniLM** is from the MiniLM model family. Our `all-MiniLM-L6-v2` model turns text into number patterns that help compare meanings. It is the book-search helper; it does not write the chat answer.
+- **FLAN-T5** is Google's instruction-trained version of the T5 model family. Our `google/flan-t5-base` model gets the question and book evidence, then tries to phrase a response.
+- **The reader model** (`deepset/minilm-uncased-squad2`) has a different job: it looks inside the found passages for words that may answer the question.
+
+Think of Python as the worker and the models as tools the worker uses. The Python code loads a model and calls it for a particular job. All three models in this version run on your computer; they are not GPT-4o mini and do not need an API key.
+
 ## What the main files do
 
 - `static/index.html` describes the chat page elements.
